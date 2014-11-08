@@ -45,7 +45,7 @@ for section in config.sections():
     accounts += [mail]
 
 
-offset = 0  # Today=0, Yesterday=1, 2-days-ago=2,...
+offset = 1  # Today=0, Yesterday=1, 2-days-ago=2,...
 finish_date = date.today() + timedelta(1 - offset)
 start_date = date.today() - timedelta(offset)
 
