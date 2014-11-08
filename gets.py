@@ -52,6 +52,15 @@ start_date = date.today() - timedelta(offset)
 finish_date_str = finish_date.strftime("%d-%b-%Y")
 start_date_str = start_date.strftime("%d-%b-%Y")
 
+# Print date of query for clarity
+if offset == 0:
+    offset_string = "today"
+elif offset == 1:
+    offset_string = "yesterday"
+else:
+    offset_string = "%d days ago" %(offset)
+print("Query time: %s (%s)" %(start_date_str, offset_string) )
+
 if DEBUG:
     print("From %s to %s" %(start_date_str, finish_date_str))
 
